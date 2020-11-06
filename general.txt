@@ -28,3 +28,17 @@ boolean logic  test, cmp
 
 Control transfer  j<condition> (or jmp)
 subroutines call,ret
+
+Note: The subtraction operation 
+subq %rax, %rbx is
+%rbx = %rbx - %rax
+
+Conditional codes
+a - if above
+ae - if above or equal
+c - on carry
+e - if equal
+ge - if greater or equal
+ne - if not equal
+o - on overflow
+z - if zero
