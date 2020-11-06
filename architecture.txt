@@ -1,0 +1,16 @@
+movq '%qdi, %rbx'
+cmpq '$2, %rbx'   ==> Instruction
+jge LBB0_1
+movq '%rbx, %rax' ==> Register
+jmp 'LBB0_3'
+LBB0_1:
+leaq '-1(%rbx), %rdi' ==> Indirect memory address like &
+callq '_fib'
+movq '%rax, %r14'
+addq '$-2, %rbx' ==> Immediate value like ,resultado
+movq '%rbx, rdi'
+callq '_fib'
+addq' %r14, %rax'
+
+
+
