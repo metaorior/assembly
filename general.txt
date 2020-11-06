@@ -1,0 +1,30 @@
+the hardware goes to the sequence , unless it encounters a JMP
+or any conditional jump
+
+Format: <opcode> <operand_list>
+opcode: the indentifier of the instruction
+operand_list: is 0,1,2 or (rarely) 3
+typically operands are sources and one operand may
+be the destination
+
+Example: addl   %edi, %ecx
+         -       -     ------     
+                   .....       ..Destination Operand
+         Opcode   Operand List
+
+in Intel Syntax the FIRST operand is the destination
+
+Data movement
+Move mov
+Conditional move cmov
+Sign or zero extension  movs,movz
+Stack push,pop
+
+Arithmetic and logic add,sub,mul,imul,div,idiv
+lea,sal,sar,shl,shr,rol,ror,inc,dec,neg
+
+Binary logic  and, 'or', xor,not
+boolean logic  test, cmp
+
+Control transfer  j<condition> (or jmp)
+subroutines call,ret
